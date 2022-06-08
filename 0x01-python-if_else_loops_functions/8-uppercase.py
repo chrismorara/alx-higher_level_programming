@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-def to_upper(character):
-    if ord(character) >= 97 and ord(character) <= 122:
-        return (ord(character) -32)
-    else:
-        return ord(character)
-
-    def uppercase(string):
-        string_new = ""
-        for character in string:
-            string_new += "%c" % to upper(character)
-        print("{:s}".format(string_new))
+def to_upper(str):
+    s= ""
+    for c in str:
+        if ord(c) == 32:
+            s += c
+        elif 64 < ord(c) < 91:
+            s += chr(ord(c) - 32)
+        else:
+            s += c
+    print("{}".format(s))
